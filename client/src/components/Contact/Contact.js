@@ -31,7 +31,7 @@ class Contact extends React.Component {
           <section class="contactFormContainer">
             <main id="content">
 
-              <div class="text-black" style={{ position: "absolute", top: "15%", left: "50%", right: "50%", borderRadius: "20px", transform: "translate(-50%, 0%)", width: "50%", height: "100%", boxShadow: "0px 0px 5px rgba(0, 0, 0, .6)" }}>
+              <div class="text-black" style={{ position: "absolute", top: "15%", left: "50%", right: "50%", borderRadius: "20px", transform: "translate(-50%, 0%)", width: "50%", height: "100%",maxWidth:"650px",maxHeight:"750px", boxShadow: "0px 0px 5px rgba(0, 0, 0, .6)" }}>
 
                 <div class="container py-8">
                   <div class="row justify-content-center">
