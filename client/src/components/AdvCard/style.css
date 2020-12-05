@@ -1,0 +1,33 @@
+.card-text p {
+    display: inline;
+}
+
+.modal-backdrop.show {
+    opacity: 0;
+    display: none;
+}
+
+#modal-content {
+    /* background-color: #fefefe; */
+    margin: auto;
+    margin-top: -27%;
+    border: 1px solid #888;
+    width: 100%;
+    background-color: white;
+}
+
+#exampleModalid {
+    height: 17%;
+    margin-top: 20%;
+    overflow: visible;
+}
+
+#exampleModalCenterid {
+    height: 25%;
+    margin-top: 20%;
+    overflow: visible;
+}
+ #starReview {
+     height: 5%;
+     display: inline;
+ }

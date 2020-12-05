@@ -1,0 +1,36 @@
+.card-text p {
+    display: inline;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hiddenText {
+    display: none;
+}
+
+.modal-backdrop.show {
+    opacity: 0;
+    display: none;
+}
+
+#modal-content {
+    margin: auto;
+    margin-top: 0%;
+    border: 1px solid #888;
+    width: 100%;
+    background-color: white;
+}
+
+#exampleModalid {
+    height: 17%;
+    margin-top: 20%;
+    overflow: visible;
+}
+
+#exampleModalCenterid {
+    height: 25%;
+    margin-top: 20%;
+    overflow: visible;
+}

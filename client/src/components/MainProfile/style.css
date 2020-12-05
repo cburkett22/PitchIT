@@ -1,0 +1,1024 @@
+/* Side bar styling region */
+
+/* Animation for side bar slide in  */
+@keyframes sideBarSlider {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  150% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+/* Entire sidebar div style  */
+.sideBarStyle {
+  float: left;
+  width: 12%;
+  height: 9%;
+  margin-top: 25%;
+  font-weight: 900;
+  font-size: large;
+  margin-left: 4%;
+  text-align: center;
+}
+
+/* Side bar options text style  */
+.optionsTextAlign {
+  text-align: start;
+  font-size: 100%;
+  font-weight: 795;
+}
+
+/* Side bar options icon style  */
+.iconStyle {
+  height: 15%;
+  width: 15%;
+  margin: 10%;
+}
+
+.arrowIconStyle {
+  height: 10%;
+  width: 10%;
+  clear: both;
+  display: inline-flex;
+  float: right;
+}
+
+/* Side bar profile picture style  */
+.profilePicStyle {
+  height: 30%;
+  width: 95%;
+  padding: 10%;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  animation: sideBarSlider 1s forwards;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+  object-fit: scale-down;
+  object-fit: contain;
+}
+
+/* Side bar options (list items) style  */
+.sideBarMenuItem {
+  padding: 1%;
+  border-top: 1px solid rgb(238, 232, 232);
+  border-radius: 15px 0px 15px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+  cursor: pointer;
+  position: relative;
+  animation: sideBarSlider 1s forwards;
+}
+
+.sidebarText {
+  padding: 3%;
+  margin-top: 7%;
+}
+
+/* Trip option specific style  */
+.tripsStyle {
+  color: #f4511e;
+  animation-timing-function: linear;
+}
+
+.tripsStyle:hover {
+  color: black;
+  background-color: #fd9575;
+}
+
+
+.tripActive {
+  color: black;
+  background-color: #fd9575;
+}
+
+/* Review option specific style  */
+.reviewStyle {
+  color: #1aa71a;
+  animation-timing-function: ease-out;
+}
+
+.reviewStyle:hover {
+  color: black;
+  background-color: #cdfa9e;
+}
+
+.revewActive {
+  color: black;
+  background-color: #cdfa9e;
+}
+
+.dates {
+  margin-left: 0.5%;
+  color: rgb(24, 48, 18);
+  opacity: 0.8;
+  border-radius: 7%;
+  padding: 1%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visibile {
+  visibility: visible;
+}
+
+/* Milestone option specific style  */
+.mileStoneStyle {
+  color: #FFAB00;
+  animation-timing-function: ease-in-out;
+}
+
+.mileStoneStyle:hover {
+  color: black;
+  background-color: #f1c772;
+}
+
+.milestoneActive {
+  color: black;
+  background-color: #f1c772;
+}
+
+/* Timeline option specific style  */
+.timelineStyle {
+  color: #864e3b;
+  animation-timing-function: ease-out;
+}
+
+.timelineStyle:hover {
+  color: black;
+  background-color: #b98472;
+}
+
+.timelineActive {
+  color: black;
+  background-color: #b98472;
+}
+
+/* Responsive styling for mobile deives  */
+
+@media only screen and (max-width: 600px) {}
+
+/* End region  */
+
+
+/* Content section styling region */
+.contentAreaStyle {
+  background-color: white;
+  width: 75%;
+  height: auto;
+  margin-bottom: 50%;
+  margin-left: 20%;
+  top: 63%;
+  position: absolute;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+  font-weight: 900;
+  animation: contentSectionSlider 1s forwards;
+}
+
+@keyframes contentSectionSlider {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.contentTitleIcon {
+  width: 5%;
+  display: inline-block;
+  margin-left: 2%;
+  margin-top: 1%;
+  border-radius: 25%;
+}
+
+/* End region  */
+
+/* Styling for banner */
+.welcome {
+  font-family: 'Caveat', cursive;
+  font-size: 560%;
+  font-weight: 200;
+  padding-top: "10%";
+  padding-left: "40%";
+  color: rgb(233, 233, 233);
+  text-shadow: 2px 2px 4px #000000b2, 0 0 3px #FF0000, 0 0 5px #0000FF;
+  padding-top: 3%;
+}
+
+.quote {
+  font-family: 'Caveat', cursive;
+  font-size: 300%;
+  /*padding-top: "10%"; */
+  padding-left: "40%";
+  color: rgb(233, 233, 233);
+  text-shadow: 2px 2px 4px #000000b2, 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+/* End region  */
+
+/* Styling for Milestone  */
+
+.milestoneStyle {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+/* ================ The Timeline ================ */
+
+.timeline {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80, 80, 80);
+  background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+  background: -webkit-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 0;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-l {
+  position: relative;
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: rgb(248, 248, 248);
+  padding: 6px 10px;
+  border-radius: 5px;
+
+  font-weight: 600;
+  text-align: left;
+}
+
+.direction-l .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.direction-r .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255, 80, 80);
+  z-index: 10;
+}
+
+.direction-r .flag:before {
+  left: -40px;
+}
+
+.direction-l .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.time-wrapper {
+  display: inline;
+
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(250, 80, 80);
+  vertical-align: middle;
+}
+
+.direction-l .time-wrapper {
+  float: left;
+}
+
+.direction-r .time-wrapper {
+  float: right;
+}
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248, 248, 248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.direction-r .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+  .timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+  }
+
+  .timeline li {
+    padding: 2em 0;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: none;
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .flag-wrapper {
+    text-align: center;
+  }
+
+  .flag {
+    background: rgb(255, 255, 255);
+    z-index: 15;
+  }
+
+  .direction-l .flag:before,
+  .direction-r .flag:before {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    content: ' ';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-left: -9px;
+    background: #fff;
+    border-radius: 10px;
+    border: 4px solid rgb(255, 80, 80);
+    z-index: 10;
+  }
+
+  .direction-l .flag:after,
+  .direction-r .flag:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    height: 0;
+    width: 0;
+    margin-left: -8px;
+    border: solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    border-width: 8px;
+    pointer-events: none;
+  }
+
+  .time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+  }
+
+  .direction-l .time-wrapper {
+    float: none;
+  }
+
+  .direction-r .time-wrapper {
+    float: none;
+  }
+
+  .desc {
+    position: relative;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: rgb(245, 245, 245);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+
+    z-index: 15;
+  }
+
+  .direction-l .desc,
+  .direction-r .desc {
+    position: relative;
+    margin: 1em 1em 0 1em;
+    padding: 1em;
+
+    z-index: 15;
+  }
+
+}
+
+
+@media screen and (min-width: 400px) {
+
+  .direction-l .desc,
+  .direction-r .desc {
+    margin: 1em 4em 0 4em;
+  }
+
+}
+
+/* End region  */
+.reviewTitle {
+  float: left;
+  padding-right: 0.5%;
+}
+
+/*Star Rating*/
+.checked {
+  color: orange;
+  float: left;
+}
+
+.reviewText {
+  clear: both;
+}
+
+/*Add image label*/
+.add-image-label {
+  color: transparent;
+}
+
+#add-image-input {
+  opacity: 1;
+}
+
+.card {
+  float: left;
+  width: 25rem;
+  margin: 2%;
+  text-align: center;
+}
+
+/*Image upload Div*/
+.img-upload {
+  position: relative;
+}
+
+/*hidden*/
+.hidden {
+  visibility: hidden;
+}
+
+/*Upload profile picture button */
+.upload-profile-btn {
+  position: absolute;
+  z-index: 10;
+  left: 59%;
+  top: 58%;
+  width: 33%;
+  height: 20%;
+  background-color: rgb(255, 205, 97);
+  border-radius: 25%;
+  border: 1px solid rgb(107, 107, 107);
+  font-size: 22px;
+  text-align: center;
+}
+
+.displayBlock {
+  display: inline-block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  border-radius: "20px";
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 85%;
+  height: 85%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: "20px";
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border-radius: "20px";
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: "20px";
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: "20px";
+}
+
+.flip-card-back {
+  background-color: whitesmoke;
+  color: rgba(53, 53, 53, 0.829);
+  transform: rotateY(180deg);
+  border-radius: "20px";
+}
+
+.profileContentTitle {
+  text-align: "start";
+  vertical-align: "middle";
+  margin-top: "1%";
+  padding: ".5%";
+  display: "inline-block";
+  font-size: 32px;
+  margin-left: 2%;
+}
+
+/*Spacing between title and icon in main profile area*/
+.spacing {
+  margin-left: 1.5%;
+}
+
+.bannerStyle {
+  background: url(https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&auto=format&fit=crop&w=3589&q=80);
+  background-size: contain, cover;
+  background-color: rgba(0, 0, 0, 0.609);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 300%;
+  position: absolute;
+  z-index: -5;
+  margin-top: 4%;
+  width: 100%;
+  height: 45%;
+  text-align: center;
+}
+
+.badgeCardStyle {
+  width: 50%;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.badgeCardStyleInner {
+  width: 70%;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.userMilestone {
+  width: 50%;
+  clear: both;
+  margin-left: 2%;
+  display: inline-flex;
+}
+
+.displayFlex {
+  display: inline-flex;
+}
+
+.displayAvailableFlex {
+  display: flex;
+}
+
+.availableBadge {
+  margin: 2%;
+  font-size: large;
+}
+
+.flipCardInner {
+  height: 50%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+.flipCardFront {
+  height: auto;
+  width: auto;
+  border-radius: 20px;
+}
+
+.flipCard {}
+
+.InnerDiv {
+  width: 70%;
+  clear: both;
+  display: flex;
+}
+
+.availableContainer {
+  width: 50%;
+  height: 50%;
+  clear: both;
+  display: inline-block;
+}
+
+.badgeStyle {
+  width: 100%;
+  float: left;
+  height: 50%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+}
+
+.cardText {
+  padding: 10%;
+  font-size: small;
+}
+
+/* Mobile style  */
+@media only screen and (max-width: 600px) {
+
+  /* Side bar options text style  */
+  .optionsTextAlign {
+    text-align: center;
+  }
+
+  .sidebarText {
+    clear: both;
+    display: none;
+  }
+
+  /* Entire sidebar div style  */
+  .sideBarStyle {
+    float: left;
+    width: 14%;
+    height: 10%;
+    margin-top: 60%;
+    font-weight: 900;
+    align-content: middle;
+  }
+
+
+  /* Side bar options icon style  */
+  .iconStyle {
+    height: 55%;
+    width: 55%;
+    margin: 10%;
+    text-align: center;
+  }
+
+  /* Side bar profile picture style  */
+  .profilePicStyle {
+    height: 110%;
+    width: 120%;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    animation: sideBarSlider 1s forwards;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+    object-fit: scale-down;
+    object-fit: contain;
+  }
+
+  /* Side bar options (list items) style  */
+  .sideBarMenuItem {
+    padding: 1%;
+    border-top: 1px solid rgb(238, 232, 232);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+    cursor: pointer;
+    position: relative;
+    animation: sideBarSlider 1s forwards;
+  }
+
+  /* Trip option specific style  */
+  .tripsStyle {
+    color: #f4511e;
+    animation-timing-function: linear;
+  }
+
+  .tripsStyle:hover {
+    color: black;
+    background-color: #fd9575;
+  }
+
+
+  .tripActive {
+    color: black;
+    background-color: #fd9575;
+  }
+
+  /* Review option specific style  */
+  .reviewStyle {
+    color: #1aa71a;
+    animation-timing-function: ease-out;
+  }
+
+  .reviewStyle:hover {
+    color: black;
+    background-color: #cdfa9e;
+  }
+
+  .revewActive {
+    color: black;
+    background-color: #cdfa9e;
+  }
+
+  /* Milestone option specific style  */
+  .mileStoneStyle {
+    color: #FFAB00;
+    animation-timing-function: ease-in-out;
+  }
+
+  .mileStoneStyle:hover {
+    color: black;
+    background-color: #f1c772;
+  }
+
+  .milestoneActive {
+    color: black;
+    background-color: #f1c772;
+  }
+
+  /* Timeline option specific style  */
+  .timelineStyle {
+    color: #864e3b;
+    animation-timing-function: ease-out;
+  }
+
+  .timelineStyle:hover {
+    color: black;
+    background-color: #b98472;
+  }
+
+  .timelineActive {
+    color: black;
+    background-color: #b98472;
+  }
+
+  /* Styling for banner */
+  .welcome {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    margin-top: "150px";
+    padding-top: "40%";
+    color: rgb(233, 233, 233);
+  }
+
+  .quote {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    padding-left: "20%";
+    padding-right: "20%";
+    color: rgb(233, 233, 233);
+  }
+
+  /*Upload profile picture button */
+  .upload-profile-btn {
+    display: none;
+  }
+
+  /*Image upload Div*/
+  .img-upload {}
+
+
+  /* Content section styling region */
+  .contentAreaStyle {
+    background-color: white;
+    width: 75%;
+    height: auto;
+    margin-bottom: 50%;
+    margin-left: 20%;
+    top: 45%;
+    position: absolute;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+    font-weight: 900;
+    animation: contentSectionSlider 1s forwards;
+  }
+
+  .profileContentTitle {
+    text-align: "start";
+    vertical-align: "middle";
+    margin: "5%";
+    padding: "5%";
+    display: "inline-flex";
+    clear: both;
+    font-size: medium;
+  }
+
+  .bannerStyle {
+    background: url(https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&auto=format&fit=crop&w=3589&q=80);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.609);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -5;
+    margin-top: 5%;
+    width: 100%;
+    height: 35%;
+    text-align: center;
+  }
+
+  .contentTitleIcon {
+    width: 15%;
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 1%;
+    border-radius: 25%;
+  }
+
+  .badgeCardStyle {
+    margin: 1%;
+    width: 50%;
+    height: fit-content;
+    border-radius: 20px;
+  }
+
+  .badgeCardStyleInner {
+    width: 80%;
+    height: fit-content;
+    border-radius: 20px;
+  }
+
+  .userMilestone {
+    width: 100%;
+    clear: both;
+    margin-left: 2%;
+    display: inline-flex;
+  }
+
+  .displayFlex {
+    display: block;
+  }
+
+  .newline {
+    clear: both;
+    display: block;
+  }
+
+  .userMilestone {}
+
+  .availableBadge {
+    font-size: small;
+  }
+
+
+  .flipCardInner {
+    height: 30%;
+    width: 45%;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .flipCardFront {
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .flipCard {
+    margin-bottom: -140px;
+    margin-right: 10%;
+  }
+
+  .InnerDiv {}
+
+
+  .displayAvailableFlex {
+    display: block;
+  }
+
+  .availableContainer {
+    width: 45%;
+    height: auto;
+  }
+
+  .clearFlex {
+    /* display:inline-block; */
+  }
+
+  .badgeStyle {
+    width: 100%;
+    float: left;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+  }
+
+  .cardText {
+    padding: 10%;
+    font-size: xx-small;
+  }
+
+  .comingSoonText {
+    background-color: white;
+    padding: 1%;
+    font-size: x-small;
+  }
+
+  .arrowIconStyle {
+    display: none;
+  }
+
+}
+
+/* //Any device with className .loginFeature below 1024px will not be displayed
+@media (max-width: 1024px) {
+  .loginFeature:{
+    display: none;
+  }
+} */

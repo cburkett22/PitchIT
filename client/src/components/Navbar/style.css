@@ -1,0 +1,12 @@
+:root{
+    --space: 1rem 0;
+}
+
+.nav-item :hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgba(76, 192, 61, 0.705) !important;
+}
+
+.navbar {
+    z-index: 1;
+}

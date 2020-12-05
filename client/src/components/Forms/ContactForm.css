@@ -1,0 +1,93 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.contact-container {
+  margin-left: 15%;
+  background-color: rgb(186, 198, 186);
+  margin: 100px auto;
+  width: 90%;
+  box-shadow: 1px 1px 4px 1px lightgrey;
+}
+
+.contact-container form {
+  width: 100%;
+  padding: 10px;
+}
+
+.contact-container label {
+  letter-spacing: 0.1rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: orangered;
+  margin-bottom: 3px;
+}
+
+.contact-container input,
+.contact-container textArea {
+  width: 100%;
+  color: darkgreen;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  box-shadow: 1px 1px 4px 1px lightgoldenrodyellow;
+}
+
+.contact-container input:focus,
+.contact-container textArea:focus {
+  box-shadow: 1px 1px 4px 1px rgb(185, 70, 13);
+}
+
+.singleItem {
+  margin-top: 10px 0;
+}
+
+.btnMessage {
+  width: 100%;
+  text-align: center;
+}
+
+.btnMessage button {
+  width: 150px;
+  font-size: 18px;
+  letter-spacing: 0.2rem;
+  padding: 5px;
+  border: 1px solid;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  margin-top: 5px;
+}
+
+.btnMessage button:hover {
+  border: 1px solid #fefefe;
+  background-color: darkmagenta;
+}
+
+.msgtxt {
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  letter-spacing: 0.2rem;
+  font-style: italic;
+  width: 340px;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+  background-color: #fff;
+  border-radius: 5px;
+  display: none;
+}
+
+.mssgShow {
+  display: block;
+}
+
+@media screen and (min-width: 664px) {
+  .contact-container {
+    width: 60%;
+  }
+}
