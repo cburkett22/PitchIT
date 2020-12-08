@@ -46,10 +46,11 @@ const AdvCard = (props) => {
             this.resetUserInputs();
         })
         .catch((err) => {
+            console.log(info);
             console.log('Internal server error :(', err);
         });
 
-        window.location.reload();
+        // window.location.reload();
     };
 
     const saveReview2 = (event) => {
