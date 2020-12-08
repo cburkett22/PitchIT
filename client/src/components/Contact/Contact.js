@@ -28,42 +28,42 @@ class Contact extends React.Component {
         <div>
 
           {/* Contact form region  */}
-          <section class="contactFormContainer">
+          <section className="contactFormContainer">
             <main id="content">
 
-              <div class="text-black" style={{ position: "absolute", top: "15%", left: "50%", right: "50%", borderRadius: "20px", transform: "translate(-50%, 0%)", width: "50%", height: "100%",maxWidth:"650px",maxHeight:"750px", boxShadow: "0px 0px 5px rgba(0, 0, 0, .6)" }}>
+              <div className="text-black" style={{ position: "absolute", top: "15%", left: "50%", right: "50%", borderRadius: "20px", transform: "translate(-50%, 0%)", width: "50%", height: "100%",maxWidth:"650px",maxHeight:"750px", boxShadow: "0px 0px 5px rgba(0, 0, 0, .6)" }}>
 
-                <div class="container py-8">
-                  <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                <div className="container py-8">
+                  <div className="row justify-content-center">
+                    <div className="col-lg-8">
                       <br></br>
-                      <h1 class="display-4 mb-4">Contact</h1>
+                      <h1 className="display-4 mb-4">Contact</h1>
                       <hr></hr>
                     </div>
                   </div>
                 </div>
-                <div class="container">
-                  <div class="bg-white">
-                    <div class="container contactContainer row justify-content-center">
-                      <div class="col-md-10 col-lg-8">
-                        <p>Fields marked with an <span class="text-primary">*</span> are required.</p>
-                        <form class="py-4">
-                          <div class="form-group">
-                            <label for="inputName">Name <span class="text-primary">*</span></label>
-                            <input type="text" class="form-control" id="inputName"
+                <div className="container">
+                  <div className="bg-white">
+                    <div className="container contactContainer row justify-content-center">
+                      <div className="col-md-10 col-lg-8">
+                        <p>Fields marked with an <span className="text-primary">*</span> are required.</p>
+                        <form className="py-4">
+                          <div className="form-group">
+                            <label for="inputName">Name <span className="text-primary">*</span></label>
+                            <input type="text" className="form-control" id="inputName"
                               placeholder="Enter your name" required></input>
                           </div>
-                          <div class="form-group">
-                            <label for="inputEmail">Email <span class="text-primary">*</span></label>
-                            <input type="email" class="form-control" id="inputEmail"
+                          <div className="form-group">
+                            <label for="inputEmail">Email <span className="text-primary">*</span></label>
+                            <input type="email" className="form-control" id="inputEmail"
                               placeholder="Enter your email address" required></input>
                           </div>
-                          <div class="form-group">
-                            <label for="messageTetxarea">Message <span class="text-primary">*</span></label>
-                            <textarea class="form-control" id="messageTetxarea" rows="9"
+                          <div className="form-group">
+                            <label for="messageTetxarea">Message <span className="text-primary">*</span></label>
+                            <textarea className="form-control" id="messageTetxarea" rows="9"
                               placeholder="Enter your message" required></textarea>
                           </div>
-                          <button type="submit" class="btn btn-pill"
+                          <button type="submit" className="btn btn-pill"
                             style={{ backgroundColor: "black", fontWeight: "bold", color: "#f4511e" }}>Submit</button>
                         </form>
                       </div>
@@ -71,14 +71,14 @@ class Contact extends React.Component {
                   </div>
                 </div>
 
-                <div class="container">
-                  <div class="row py-5">
-                    <div class="col-lg-15"></div>
+                <div className="container">
+                  <div className="row py-5">
+                    <div className="col-lg-15"></div>
                   </div>
                 </div>
-                <div class="container">
-                  <div class="row py-5">
-                    <div class="col-lg-15"></div>
+                <div className="container">
+                  <div className="row py-5">
+                    <div className="col-lg-15"></div>
                   </div>
                 </div>
               </div>
