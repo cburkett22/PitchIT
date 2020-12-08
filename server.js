@@ -64,68 +64,6 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use('/api', routes);
 
-app.get('/api/completed', function(req, res){
-  CreateTripModel.find({ completed: true })
-    .exec()
-    .then(doc => {
-      res.send(doc)
-    })
-    .catch()
-});
-
-app.put('/api/update/:id', function(req, res) {
-  console.log("req:", req.params.id);
-  console.log("review", req.body);
-
-  CreateTripModel.updateOne({ _id: req.params.id }, { $set: { completed: true, review: req.body.review, stars: req.body.stars } }, { upsert: false })
-    .exec()
-    .then(doc => {
-      res.send(doc)
-    })
-    .catch()
-});
-
-app.put('/api/updatecard/:id', function(req, res) {
-  console.log("req:", req.params.id);
-  console.log("review", req.body);
-
-  CreateTripModel.updateOne({ _id: req.params.id }, { $set: { 
-    title: req.body.title,
-    date: req.body.date,
-    location: req.body.location,
-    campers: req.body.campers,
-    items: req.body.items
-  } }, { upsert: false })
-    .exec()
-    .then(doc => {
-      res.send(doc)
-    })
-    .catch()
-});
-
-app.delete('/api/delete/:id', function(req, res) {
-  console.log("req:", req.params.id);
-  console.log("review", req.body.review);
-  
-  CreateTripModel.deleteOne({ _id: req.params.id })
-    .exec()
-    .then(doc => {
-      res.send(doc)
-    })
-    .catch()
-});
-
-//NOT DONE
-// app.get('/api/update/:id', function(req, res) {
-//   CreateTripModel.updateOne({ _id: ':id' }, { $set: { completed: true } }, { upsert: false })
-//     .exec()
-//     .then(doc => {
-//       res.send(doc)
-//     })
-//     .catch()
-// });
-//NOT DONE
-
 // app.post("/api/forma", (req, res)=>{
 //   const sgMail = require('@sendgrid/mail')
 //   console.log(req.body.name, req.body.lastname, req.body.email, req.body.message);

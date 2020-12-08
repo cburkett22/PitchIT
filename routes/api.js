@@ -123,4 +123,55 @@ router.post("/login", (req, res) => {
     });
   });
 
+  router.get('/completed', function(req, res){
+    CreateTripModel.find({ completed: true })
+      .exec()
+      .then(doc => {
+        res.send(doc)
+      })
+      .catch()
+  });
+  
+  router.put('/update/:id', function(req, res) {
+    console.log("req:", req.params.id);
+    console.log("review", req.body);
+  
+    CreateTripModel.updateOne({ _id: req.params.id }, { $set: { completed: true, review: req.body.review, stars: req.body.stars } }, { upsert: false })
+      .exec()
+      .then(doc => {
+        res.send(doc)
+      })
+      .catch()
+  });
+  
+  router.put('/updatecard/:id', function(req, res) {
+    console.log("req:", req.params.id);
+    console.log("review", req.body);
+  
+    CreateTripModel.updateOne({ _id: req.params.id }, { $set: { 
+      title: req.body.title,
+      date: req.body.date,
+      location: req.body.location,
+      campers: req.body.campers,
+      items: req.body.items
+    } }, { upsert: false })
+      .exec()
+      .then(doc => {
+        res.send(doc)
+      })
+      .catch()
+  });
+  
+  router.delete('/delete/:id', function(req, res) {
+    console.log("req:", req.params.id);
+    console.log("review", req.body.review);
+    
+    CreateTripModel.deleteOne({ _id: req.params.id })
+      .exec()
+      .then(doc => {
+        res.send(doc)
+      })
+      .catch()
+  });
+
   module.exports = router;
