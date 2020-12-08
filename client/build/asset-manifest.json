@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.035324e6.chunk.css",
+    "main.js": "/static/js/main.cd493724.chunk.js",
+    "main.js.map": "/static/js/main.cd493724.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8f49b074.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8f49b074.js.map",
+    "static/css/2.ef627d35.chunk.css": "/static/css/2.ef627d35.chunk.css",
+    "static/js/2.f0e59778.chunk.js": "/static/js/2.f0e59778.chunk.js",
+    "static/js/2.f0e59778.chunk.js.map": "/static/js/2.f0e59778.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ef627d35.chunk.css.map": "/static/css/2.ef627d35.chunk.css.map",
+    "static/css/main.035324e6.chunk.css.map": "/static/css/main.035324e6.chunk.css.map",
+    "static/js/2.f0e59778.chunk.js.LICENSE.txt": "/static/js/2.f0e59778.chunk.js.LICENSE.txt",
+    "static/media/badge-icon.2cb049d1.png": "/static/media/badge-icon.2cb049d1.png",
+    "static/media/camper_badge.2bc8f454.png": "/static/media/camper_badge.2bc8f454.png",
+    "static/media/campfire.50b4ce8c.gif": "/static/media/campfire.50b4ce8c.gif",
+    "static/media/expert.7c889689.gif": "/static/media/expert.7c889689.gif",
+    "static/media/explorer.8aeeb930.gif": "/static/media/explorer.8aeeb930.gif",
+    "static/media/milestone_icon.6c31a477.jpg": "/static/media/milestone_icon.6c31a477.jpg",
+    "static/media/placeholder.heic": "/static/media/placeholder.116c9853.heic",
+    "static/media/review-icon.38f5fd5e.png": "/static/media/review-icon.38f5fd5e.png",
+    "static/media/rookie.682e28ca.gif": "/static/media/rookie.682e28ca.gif",
+    "static/media/sequoia_np.3b757d46.png": "/static/media/sequoia_np.3b757d46.png",
+    "static/media/star.f0fcd86c.png": "/static/media/star.f0fcd86c.png",
+    "static/media/timeline-icon3.f78fba9e.PNG": "/static/media/timeline-icon3.f78fba9e.PNG",
+    "static/media/tmeline_icon2.f20ba51f.png": "/static/media/tmeline_icon2.f20ba51f.png",
+    "static/media/trips-icon.3e962df9.png": "/static/media/trips-icon.3e962df9.png",
+    "static/media/yellowstone_np.463a5e53.png": "/static/media/yellowstone_np.463a5e53.png",
+    "static/media/yosemite_np.1b7a84d8.png": "/static/media/yosemite_np.1b7a84d8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f49b074.js",
+    "static/css/2.ef627d35.chunk.css",
+    "static/js/2.f0e59778.chunk.js",
+    "static/css/main.035324e6.chunk.css",
+    "static/js/main.cd493724.chunk.js"
+  ]
+}

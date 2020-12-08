@@ -5,7 +5,6 @@ const passport = require("passport");
 const routes = require("./routes/api");
 const users = require("./routes/api");
 const app = express();
-require('dotenv').config();
 const CreateTripModel = require("./models/CreateTrip.js");
 
 //ADDED NEW STUFF START
@@ -19,21 +18,8 @@ const crypto = require("crypto");
 
 const apiKey = process.env.apiKey;
 
-// if (process.env.NODE_ENV === 'production') {
-// 	app.use(express.static('client/build'));
-// }
-
-// const root = require('path').join(__dirname, 'client', 'build')
-// app.use(express.static(root));
-
-// app.get("*", (req, res) => {
-//     res.sendFile('index.html', { root });
-// });
-
-const MONGODB_URI = 'mongodb+srv://dbUser:Test123@cluster0.neguo.mongodb.net/pitchit_db?retryWrites=true&w=majority';
-
 // Connect to MongoDB
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/pitchit_db', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pitchit_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -59,6 +45,18 @@ app.use(passport.initialize());
 
 // Passport config
 require("./config/passport")(passport);
+
+// Heroku deployment build folder
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
+
+const root = require('path').join(__dirname, 'client', 'build')
+app.use(express.static(root));
+
+app.get("*", (req, res) => {
+    res.sendFile('index.html', { root });
+});
 
 // Routes
 app.use("/api/users", users);
