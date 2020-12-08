@@ -94,35 +94,33 @@ router.post("/login", (req, res) => {
     });
   });
 
-  // Posting new trip card data
-  router.post("/create", (req, res) => {
+  // COREYS NEW STUFF FOR TRIP CARDS
+  router.get('/', (req, res) => {
+    CreateTripModel.find({  })
+      .then((data) => {
+        console.log('Data: ', data);
+        res.json(data);
+      })
+      .catch((err) => {
+        console.log('Error: ', err);
+      });
+  });
+
+  router.post('/create', (req, res) => {
     console.log('Body: ', req.body);
     const data = req.body;
+
     const newTripPost = new CreateTripModel(data);
 
-    newTripPost.save((error) => {
+      newTripPost.save((error) => {
       if (error) {
         res.status(500).json({ msg: 'Sorry, internal server errors...' });
         return;
       }
-
       return res.json({
         msg: 'Your data has been saved!!!'
       });
     });
   });
-
-  // router.get("/trips", (req, res) => {
-  //   console.log('Body: ', req.body);
-  //   const data = req.body;
-
-  //   CreateTripModel.find((err, trips) => {
-  //     if (err) {
-  //       console.log(err);
-  //     } else {
-  //       return res.json(trips);
-  //     }
-  //   })
-  // })
 
   module.exports = router;
