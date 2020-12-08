@@ -83,10 +83,10 @@ class CreateTrip extends React.Component {
             })
             .then(() => {
                 console.log('Data has been sent to the server!');
-                this.resetUserInputs();
+                // this.resetUserInputs();
             })
             .catch((err) => {
-                console.log('Internal server error :(', err);
+                console.log('Internal server error in axios POST route => ', err);
             });
 
             // axios.get(`http://api.amp.active.com/camping/campgrounds?pstate=CA&amenity=4004&api_key=8ek9pa2yr6hsasqubhajmzx3`)
@@ -97,8 +97,6 @@ class CreateTrip extends React.Component {
             window.location.href='/dashboard';
         });
     };
-
-     
 
     // Reset inputs
     resetUserInputs = () => {
@@ -113,9 +111,6 @@ class CreateTrip extends React.Component {
         });
     };
 
-    
-   
-
     render(){
         console.log('State: ', this.state);
         return(
@@ -123,6 +118,8 @@ class CreateTrip extends React.Component {
             <div className={classNames('container', 'blurBackground')} >
                 <div style={{paddingTop: "6%", paddingLeft: "6%", paddingRight: "6%", paddingBottom: "6%"}}>
                     <form id="create-adventure" onSubmit={this.submit}>
+                        <br></br>
+                        <br></br>
                         <div>
                             <label htmlFor="title">Adventure Name:</label>
                             <input
@@ -211,7 +208,7 @@ class CreateTrip extends React.Component {
                         </div>
                         <br></br>
                         <div>
-                            <label htmlFor="campers">Additional Camper's Username:</label>
+                            <label htmlFor="campers">Additional Camper's:</label>
                             <input
                                 list="campers-list"
                                 type="text"

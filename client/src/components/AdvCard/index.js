@@ -7,7 +7,7 @@ const AdvCard = (props) => {
     const [ trips, setTrips] = useState([]);
 
     useEffect(()=>{
-        fetch("/api/all",{
+        fetch("/api",{
           headers: { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'
@@ -18,7 +18,7 @@ const AdvCard = (props) => {
             setTrips(data)
             console.log(data.text)
         })
-      },[]);
+    },[]);
 
     const saveReview = (event) => {
         var id = event.target.value;
@@ -51,7 +51,7 @@ const AdvCard = (props) => {
         });
 
         window.location.reload();
-    }
+    };
 
     const saveReview2 = (event) => {
         var id = event.target.value;
@@ -77,7 +77,7 @@ const AdvCard = (props) => {
         });
 
         window.location.reload();
-    }
+    };
 
     const deleteCard = (event) => {
         var id = event.target.id;
@@ -98,7 +98,7 @@ const AdvCard = (props) => {
         });
 
         window.location.reload();
-    }
+    };
 
     const updateTrip = (event) => {
         event.preventDefault();
@@ -117,7 +117,7 @@ const AdvCard = (props) => {
         document.getElementById("campers3").value = payload.campers;
         document.getElementById("backpack3").value = payload.items;
         document.getElementById("updatebtn").value = event.target.id;
-    }
+    };
 
     const saveUpdate = (event) => {
         event.preventDefault();
@@ -146,7 +146,7 @@ const AdvCard = (props) => {
         });
 
         window.location.reload();
-    }
+    };
 
     return (
         <>
