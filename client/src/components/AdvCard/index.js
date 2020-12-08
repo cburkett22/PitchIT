@@ -15,9 +15,8 @@ const AdvCard = (props) => {
         })
         .then(data => data.json())
         .then(data => {
-            setTrips(data)
-            console.log(data.text)
-        })
+            setTrips(data);
+        });
     },[]);
 
     const saveReview = (event) => {
