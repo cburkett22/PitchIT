@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import Navbar from "../Navbar";
 import PropTypes from "prop-types";
 import emailjs from "emailjs-com";
@@ -7,6 +8,18 @@ import { logoutUser } from "../../actions/authActions";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 class Contact extends React.Component {
+  state = {
+    isOpen: false
+  };
+
+  openModal = () => {
+    this.setState({ isOpen: true });
+  };
+  closeModal = () => {
+    this.setState({ isOpen: false });
+    window.location.href='/dashboard';
+  };
+  
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
@@ -31,6 +44,7 @@ class Contact extends React.Component {
       });
 
     e.target.reset();
+    this.openModal();
   };
 
   render() {
@@ -74,7 +88,7 @@ class Contact extends React.Component {
                             <textarea className="form-control" id="messageTetxarea" rows="9" placeholder="Enter your message" name="message" required></textarea>
                           </div>
 
-                          <button type="submit" className="btn btn-pill" style={{ backgroundColor: "black", fontWeight: "bold", color: "#f4511e" }}>
+                          <button variant="primary" type="submit" className="btn btn-pill" style={{ backgroundColor: "black", fontWeight: "bold", color: "#f4511e" }}>
                             Submit
                           </button>
                         </form>
@@ -100,6 +114,17 @@ class Contact extends React.Component {
 
           {/* End region  */}
         </div>
+        <Modal show={this.state.isOpen} onHide={this.closeModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Thanks for your support!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Your message has been sent to the PitchIt developers. Someone will reach out soon!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.closeModal}>
+              Go Home
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
