@@ -196,11 +196,13 @@ const AdvCard = (props) => {
                     <>
                     <div className="col mb-4">
                         <div className="card h-100">
-                            <img
-                                src={each.image}
-                                className="card-img-top"
-                                alt="..."
-                            />
+                            <a href={each.url} target="_blank">
+                                <img
+                                    src={each.image}
+                                    className="card-img-top"
+                                    alt="..."
+                                />
+                            </a>
                             <div className="card-body">
                                 <h5 id="title" style={{fontWeight: "600", marginBottom: "5%"}} className="card-title">{each.title}</h5>
                                 <p style={{ textAlign: "left", marginLeft: "5%" }} className="card-text"><span style={{fontWeight: "700"}}>Dates: </span><span id="date">{each.date}</span></p>
@@ -250,7 +252,7 @@ const AdvCard = (props) => {
                         <div className="modal-dialog modal-dialog-centered" role="document">
                             <div id="modal-content" className="modal-content">
                                 <div className="modal-header">
-                                    <h5 className="modal-title" id="exampleModalLongTitle"></h5>
+                                    <h5 className="modal-title" id="exampleModalLongTitle"> </h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
