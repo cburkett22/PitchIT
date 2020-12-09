@@ -175,6 +175,7 @@ class CreateTrip extends React.Component {
                               <option value="seki">Sequoia & Kings Canyon National Parks</option>
                               <option value="thro">Theodore Roosevelt National Park</option>
                               <option value="whsa">White Sands National Park</option>
+                              <option value="yell">Yellowstone National Park</option>
                               <option value="yose">Yosemite National Park</option>
                               <option value="zion">Zion National Park</option>
                             </select>

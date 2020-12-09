@@ -209,21 +209,21 @@ const AdvCard = (props) => {
                                 <p style={{ textAlign: "left", marginLeft: "5%" }} className="card-text"><span style={{fontWeight: "700"}}>Location: </span><span id="location">{each.location}</span></p>
                                 <p style={{ textAlign: "left", marginLeft: "5%" }} className="card-text"><span style={{fontWeight: "700"}}>Campers: </span><span id="campers">{each.campers}</span></p>
                                 <p style={{ textAlign: "left", marginLeft: "5%" }} className="card-text"><span style={{fontWeight: "700"}}>Backpack: </span><span id="items">{each.items}</span></p>
-                                <div class="btn-group" role="group" aria-label="Basic example">
+                                <div className="btn-group" role="group" aria-label="Basic example">
                                     <button id={each._id} type="button" class="view-trip-btn btn btn-warning" data-id="id" data-toggle="modal" data-target="#viewTripid2" onClick={updateTrip}>
                                     Update
                                     </button>
                                     <button id={each._id} type="button" className="complete-trip-btn btn btn-success" data-toggle="modal" data-target="#exampleModalid" onClick={completeTrip}>
                                         Complete Trip
                                     </button>
-                                    <button id={each._id} type="button" class="btn btn-danger" onClick={deleteCard}>Delete</button>
+                                    <button id={each._id} type="button" className="btn btn-danger" onClick={deleteCard}>Delete</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/*//Prompt for review*/}
-                    <div className="modal fade" id="exampleModalid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade" id="exampleModalid" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div id="modal-content" className="modal-content">
                         <div className="modal-header">
@@ -248,7 +248,7 @@ const AdvCard = (props) => {
 
 
                     {/*<!-- Review Modal -->*/}
-                    <div className="modal fade" id="exampleModalCenterid" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div className="modal fade" id="exampleModalCenterid" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered" role="document">
                             <div id="modal-content" className="modal-content">
                                 <div className="modal-header">
@@ -269,7 +269,7 @@ const AdvCard = (props) => {
                                         </select>
                                         <br />
                                         <label for="exampleFormControlTextarea1">Write your review:</label>
-                                        <textarea className="form-control review-textid" id="exampleFormControlTextarea1" rows="3" maxlength="250"></textarea>
+                                        <textarea className="form-control review-textid" id="exampleFormControlTextarea1" rows="3" maxLength="250"></textarea>
                                     </div>
                                 </div>
                                 <div className="modal-footer">
@@ -283,7 +283,7 @@ const AdvCard = (props) => {
 
 
                     {/* <!--Update Trip--> */}
-                    <div className="modal fade" id="viewTripid2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div className="modal fade" id="viewTripid2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div id="modal-content" className="modal-content">
                             <div className="modal-header">
