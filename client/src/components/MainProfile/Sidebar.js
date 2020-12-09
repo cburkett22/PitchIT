@@ -5,7 +5,7 @@ import badgeIcon from "../../img/badge-icon.png";
 import timelineIcon from "../../img/tmeline_icon2.png";
 // import placeHolder from "../../img/placeholder.heic";
 import arrowIcon from "../../img/arrowIcon.png";
-import "../MainProfile/style.css";
+import "./style.css";
 import classNames from 'classnames';
 import ProfilePicture from './ProfilePicture';
 

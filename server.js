@@ -49,7 +49,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Heroku deployment build folder
-app.use(express.static('client/build'));
+// app.use(express.static('client/build'));
 
 // const root = require('path').join(__dirname, 'client', 'build')
 // app.use(express.static(root));

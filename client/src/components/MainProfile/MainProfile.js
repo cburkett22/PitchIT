@@ -5,10 +5,10 @@ import campfire from "../../img/campfire.gif";
 import reviewsIcon from "../../img/star.png";
 import milestoneIcon from "../../img/milestone_icon.jpg";
 import TimelineIcon from "../../img/timeline-icon3.PNG"
-import Reviews from "../MainProfile/Reviews";
-import Trips from "../MainProfile/Trips";
-import Milestones from "../MainProfile/MilestonesComponent";
-import Timeline from "../MainProfile/Timeline";
+import Reviews from "./Reviews";
+import Trips from "./Trips";
+import Milestones from "./MilestonesComponent";
+import Timeline from "./Timeline";
 // import { PromiseProvider } from "mongoose";
 
 

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import "../MainProfile/style.css";
+import "./style.css";
 import classNames from 'classnames';
 import placeHolder from "../../img/placeholder.heic";
 import axios from 'axios';
+import profilePic from '../../img/profilepic.jpg';
 
 class ProfilePicture extends Component {
 
@@ -66,6 +67,7 @@ class ProfilePicture extends Component {
   //   console.log(file[0]);
   // };
 
+  //  This code was inside the "src" for the img: { this.state.file ? this.state.file :placeHolder }
 
   render() {
     if(this.state.file != null){
@@ -73,7 +75,7 @@ class ProfilePicture extends Component {
     }
    
     return (<>
-      <label htmlFor="myInput"> <img src={ this.state.file ? this.state.file :placeHolder } type="camera" id="profileImage" className={classNames('profilePicStyle', 'add-image-label')} htmlFor="add-image-input" aria-describedby="add-image-input" alt="profile" /></label>
+      <label htmlFor="myInput"> <img src={profilePic} style={{ borderRadius: "50%" }} type="camera" id="profileImage" className={classNames('profilePicStyle', 'add-image-label')} htmlFor="add-image-input" aria-describedby="add-image-input" alt="profile" /></label>
       <input
         id="myInput"
         style={{ display: 'none' }}
