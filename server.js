@@ -62,29 +62,6 @@ app.use(express.static('client/build'));
 app.use("/api/users", users);
 app.use('/api', routes);
 
-// app.post("/api/forma", (req, res)=>{
-//   const sgMail = require('@sendgrid/mail')
-//   console.log(req.body.name, req.body.lastname, req.body.email, req.body.message);
-//   sgMail.setApiKey(apiKey)
-//   const msg = {
-//   to: req.body.email,// Change to your recipient
-//   from: 'haroldzuluaga@aol.com', // Change to your verified sender
-//   subject: 'This is a support ticket for Pitchit',
-//   text: req.body.message,
-//   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-// }
-// console.log(msg);
-// // sgMail
-// //   .send(msg)
-// //   .then(() => {
-// //     res.send('Email sent2')
-// //   })
-// //   .catch((error) => {
-// //     res.send(error)
-// //   })
-// });
-
-
 //ADDED NEW STUFF START
 // Create storage engine
 // const storage = new GridFsStorage({
