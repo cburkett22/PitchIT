@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import PropTypes from "prop-types";
+import emailjs from "emailjs-com";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -11,14 +12,26 @@ class Contact extends React.Component {
     this.props.logoutUser();
   };
 
-  state = {
-    fields: {}
-  };
+  // state = {
+  //   fields: {}
+  // };
 
-  onSubmit = (fields) => {
-    this.setState({ fields });
-  };
+  // onSubmit = (fields) => {
+  //   this.setState({ fields });
+  // };
 
+  sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_avavf8q', e.target, 'user_KXcU5QWtZR5y9g58QIMyU')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+    e.target.reset();
+  };
 
   render() {
     // const { user } = this.props.auth;
@@ -26,13 +39,10 @@ class Contact extends React.Component {
       <>
         <Navbar visibility={true} />
         <div>
-
           {/* Contact form region  */}
           <section className="contactFormContainer">
             <main id="content">
-
               <div className="text-black" style={{ position: "absolute", top: "15%", left: "50%", right: "50%", borderRadius: "20px", transform: "translate(-50%, 0%)", width: "50%", height: "100%",maxWidth:"650px",maxHeight:"750px", boxShadow: "0px 0px 5px rgba(0, 0, 0, .6)" }}>
-
                 <div className="container py-8">
                   <div className="row justify-content-center">
                     <div className="col-lg-8">
@@ -47,24 +57,26 @@ class Contact extends React.Component {
                     <div className="container contactContainer row justify-content-center">
                       <div className="col-md-10 col-lg-8">
                         <p>Fields marked with an <span className="text-primary">*</span> are required.</p>
-                        <form className="py-4">
+                        <form className="py-4" onSubmit={this.sendEmail}>
                           <div className="form-group">
-                            <label for="inputName">Name <span className="text-primary">*</span></label>
-                            <input type="text" className="form-control" id="inputName"
-                              placeholder="Enter your name" required></input>
+                            <label htmlFor="inputName">Name <span className="text-primary">*</span></label>
+                            <input type="text" className="form-control" id="inputName" placeholder="Enter your name" name="name" required>
+                            </input>
                           </div>
+
                           <div className="form-group">
-                            <label for="inputEmail">Email <span className="text-primary">*</span></label>
-                            <input type="email" className="form-control" id="inputEmail"
-                              placeholder="Enter your email address" required></input>
+                            <label htmlFor="inputEmail">Email <span className="text-primary">*</span></label>
+                            <input type="email" className="form-control" id="inputEmail" placeholder="Enter your email address" name="email" required></input>
                           </div>
+
                           <div className="form-group">
-                            <label for="messageTetxarea">Message <span className="text-primary">*</span></label>
-                            <textarea className="form-control" id="messageTetxarea" rows="9"
-                              placeholder="Enter your message" required></textarea>
+                            <label htmlFor="messageTetxarea">Message <span className="text-primary">*</span></label>
+                            <textarea className="form-control" id="messageTetxarea" rows="9" placeholder="Enter your message" name="message" required></textarea>
                           </div>
-                          <button type="submit" className="btn btn-pill"
-                            style={{ backgroundColor: "black", fontWeight: "bold", color: "#f4511e" }}>Submit</button>
+
+                          <button type="submit" className="btn btn-pill" style={{ backgroundColor: "black", fontWeight: "bold", color: "#f4511e" }}>
+                            Submit
+                          </button>
                         </form>
                       </div>
                     </div>
@@ -76,13 +88,13 @@ class Contact extends React.Component {
                     <div className="col-lg-15"></div>
                   </div>
                 </div>
+
                 <div className="container">
                   <div className="row py-5">
                     <div className="col-lg-15"></div>
                   </div>
                 </div>
               </div>
-
             </main>
           </section>
 
