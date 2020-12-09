@@ -92,7 +92,7 @@ const CompleCard = (props) => {
                     </div>
 
                     {/* <!--View Trip--> */}
-                    <div className="modal fade" id="viewTripid" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div className="modal fade" id="viewTripid" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div id="modal-content" className="modal-content">
                             <div className="modal-header">

@@ -123,6 +123,15 @@ router.post("/login", (req, res) => {
     });
   });
 
+  router.get('/all', function(req, res){
+    CreateTripModel.find({ completed: false })
+      .exec()
+      .then(doc => {
+        res.send(doc)
+      })
+      .catch()
+  });
+
   router.get('/completed', function(req, res){
     CreateTripModel.find({ completed: true })
       .exec()
