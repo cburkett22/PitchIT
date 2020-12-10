@@ -18,7 +18,8 @@ const crypto = require("crypto");
 
 const apiKey = process.env.apiKey;
 
-const MONGODB_URI = 'mongodb+srv://dbUser:Test123@cluster0.neguo.mongodb.net/pitchit_db?retryWrites=true&w=majority';
+// ADD YOUR MONGO USERNAME/PASS/DB NAME HERE
+const MONGODB_URI = 'mongodb+srv://<username>:<password>@cluster0.neguo.mongodb.net/<database>?retryWrites=true&w=majority';
 
 // Connect to MongoDB
 mongoose.connect(MONGODB_URI || 'mongodb://localhost/pitchit_db', {
