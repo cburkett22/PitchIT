@@ -5,24 +5,22 @@ const passport = require("passport");
 const routes = require("./routes/api");
 const users = require("./routes/api");
 const app = express();
-const CreateTripModel = require("./models/CreateTrip.js");
 
 //ADDED NEW STUFF START
 const path = require("path");
-const multer = require("multer");
+// const multer = require("multer");
 const cors = require("cors");
-const GridFsStorage = require("multer-gridfs-storage");
-const Grid = require("gridfs-stream");
-const crypto = require("crypto");
+// const GridFsStorage = require("multer-gridfs-storage");
+// const Grid = require("gridfs-stream");
+// const crypto = require("crypto");
 //ADDED NEW STUFF END
 
-const apiKey = process.env.apiKey;
+// const apiKey = process.env.apiKey;
 
 // ADD YOUR MONGO USERNAME/PASS/DB NAME HERE
-const MONGODB_URI = 'mongodb+srv://<username>:<password>@cluster0.neguo.mongodb.net/<database>?retryWrites=true&w=majority';
 
 // Connect to MongoDB
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/pitchit_db', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pitchit_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -62,6 +60,13 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
 app.use('/api', routes);
+
+app.use(express.static('client/build'));
+
+app.get('/*', (req, res) => {
+  let url = path.join(__dirname, './client/build', 'index.html');
+  res.sendFile(url);
+});
 
 //ADDED NEW STUFF START
 // Create storage engine
