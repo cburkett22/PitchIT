@@ -65,7 +65,7 @@ app.use(express.static('client/build'));
 
 app.get('/*', (req, res) => {
   let url = path.join(__dirname, './client/build', 'index.html');
-  if (!url.startsWith('/app/'))
+  if (!url.startsWith('/*'))
     url = url.substring(1);
   res.sendFile(url);
 });
