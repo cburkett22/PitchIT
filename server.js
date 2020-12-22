@@ -20,7 +20,7 @@ const cors = require("cors");
 // ADD YOUR MONGO USERNAME/PASS/DB NAME HERE
 
 // Connect to MongoDB
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/pitchit_db', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pitchit_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
