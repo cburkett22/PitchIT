@@ -7,7 +7,7 @@ const users = require("./routes/api");
 const app = express();
 
 //ADDED NEW STUFF START
-// const path = require("path");
+const path = require("path");
 // const multer = require("multer");
 const cors = require("cors");
 // const GridFsStorage = require("multer-gridfs-storage");
@@ -65,8 +65,6 @@ app.use(express.static('client/build'));
 
 app.get('/*', (req, res) => {
   let url = path.join(__dirname, './client/build', 'index.html');
-  if (!url.startsWith('/*'))
-    url = url.substring(1);
   res.sendFile(url);
 });
 
